@@ -1,37 +1,43 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-require("dotenv").config();
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    const fetchRecipes = async () => {
+    async function getRecipes() {
+      const diet = "Gluten Free";
       try {
-        // const word = "Gluten Free"
-        const res = axios.get(
-          `https://api.spoonacular.com/recipes/complexSearch?number=7&apiKey=${process.env.API_KEY}&addRecipeInformation=true&addRecipeNutrition=true`
+        const response = await axios.get(
+          `https://api.spoonacular.com/recipes/complexSearch?number=7&apiKey=${process.env.REACT_APP_API_KEY}&addRecipeInformation=true&addRecipeNutrition=true&diet=${diet}`
         );
-        // const res = axios.get(
-        //   `https://api.spoonacular.com/recipes/complexSearch?number=7&apiKey=${process.env.API_KEY}&addRecipeInformation=true&addRecipeNutrition=true`
-        // )
-        res.then((response) => {
-          console.log(response);
-        });
-        console.log(res);
-        debugger;
-        setRecipes(res.data.items);
-      } catch (err) {
-        setRecipes([]);
+        console.log(response.data.results);
+        setRecipes(response.data.results);
+      } catch (error) {
+        console.error(error);
       }
-    };
-    fetchRecipes();
+    }
+    getRecipes();
   }, []);
 
   return (
     <div>
-      <h1>Title: {recipes}</h1>
+      <h1>Title: {recipes[0]?.title} </h1>
+      <img src={recipes[0]?.image} />
+      <ol>
+        {recipes[0]?.analyzedInstructions[0]?.steps.map((item) => {
+          return <li>{item.step}</li>;
+        })}
+      </ol>
+      <ul>
+        {recipes[0]?.nutrition?.ingredients.map((item) => {
+          return <li>{item.name}</li>;
+        })}
+      </ul>
+      <h3>
+        {recipes[0]?.summary}
+      </h3>
     </div>
   );
 };

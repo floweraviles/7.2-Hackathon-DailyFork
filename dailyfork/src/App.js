@@ -2,6 +2,7 @@ import { Switch, Route } from "react-router";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
+require("dotenv").config();
 
 function App() {
   return (
