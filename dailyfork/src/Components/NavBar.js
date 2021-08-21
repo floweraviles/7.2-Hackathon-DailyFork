@@ -6,9 +6,9 @@ const NavBar = () => {
   return (
     <header>
       <nav>
-        <div>
+        <NavLink to="/">
           <img src={Logo} alt="daily-fork-logo" />
-        </div>
+        </NavLink>
       </nav>
     </header>
   );
