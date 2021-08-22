@@ -1,16 +1,14 @@
-import React from 'react';
-import DailyRecipe from "../Components/DailyRecipe"
+import React from "react";
+import DailyRecipe from "../Components/DailyRecipe";
+import "../Styles/Home.css"
 
 function Home() {
-    return (
-        <div>
-           <h1>
-               Meal of the Day
-               </h1> 
-           < DailyRecipe />
-        </div>
-    )
+  return (
+    <section className="Home">
+      <h1>Meal of the Day</h1>
+      <DailyRecipe />
+    </section>
+  );
 }
-
 
 export default Home;
