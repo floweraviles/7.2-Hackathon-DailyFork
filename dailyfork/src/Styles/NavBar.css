@@ -5,5 +5,20 @@ nav {
 nav img {
     width: 100%;
     height: auto;
-    max-width: 150px;
+    max-width: 100px;
+    position: relative;
 }
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a h1 {
+    position: absolute;
+    top: 30px;
+    color: #fff;
+    font-style: italic;
+} 
