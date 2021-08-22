@@ -1,10 +1,10 @@
 import React from 'react';
-import Recipes from "../Components/Recipes";
+import DailyRecipe from "../Components/DailyRecipe"
 
 function Home() {
     return (
         <div>
-            <Recipes />
+           < DailyRecipe />
         </div>
     )
 }
