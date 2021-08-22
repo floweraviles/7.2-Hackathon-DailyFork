@@ -7,11 +7,21 @@ const Recipes = () => {
   const [idx, setIdx] = useState(0);
   const { index } = useParams();
   const recipe = recipes[index];
+  const capitalize = (name) => {
+    return name
+      .split(" ")
+      .map((str) =>
+        str.length <= 2
+          ? str
+          : str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+      )
+      .join(" ");
+  };
   const summary = <h3>{recipe?.summary}</h3>;
   const ingredients = (
     <ul>
       {recipe?.nutrition?.ingredients.map((item) => {
-        return <li>{item.name}</li>;
+        return <li>{capitalize(item.name)}</li>;
       })}
     </ul>
   );
@@ -23,7 +33,11 @@ const Recipes = () => {
     </ol>
   );
 
-  const sections = [summary, ingredients, instructions];
+  const nutrients = <ul>{recipe?.nutrition?.nutrients.map((item) => {
+    return <li>{item.name}: {item.amount} {item.unit}</li>
+  })}</ul>
+
+  const sections = [summary, ingredients, instructions, nutrients];
 
   const handleClick = (e) => {
     setIdx(e.target.value);
@@ -57,6 +71,9 @@ const Recipes = () => {
         </button>
         <button value="2" onClick={handleClick}>
           Instructions
+        </button>
+        <button value="3" onClick={handleClick}>
+          Nutrients
         </button>
       </div>
       <div>{sections[idx]}</div>
