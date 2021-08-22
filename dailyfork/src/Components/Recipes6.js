@@ -23,6 +23,11 @@ const Recipes = () => {
 
   return (
     <div>
+        <Link to="/">
+        <button>
+            Back 
+        </button>
+        </Link>
       <h1>Title: {recipes[6]?.title} </h1>
       <img src={recipes[6]?.image} />
       <ol>
