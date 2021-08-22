@@ -30,7 +30,6 @@ const DailyRecipe = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      navigation
       pagination={{ clickable: true }}
     >
       {recipes.map((recipe, i) => {
