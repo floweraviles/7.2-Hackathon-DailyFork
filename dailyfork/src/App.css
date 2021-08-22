@@ -4,8 +4,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient( to bottom, #4DC04D, #CBDBA7);
-  height: 100vh;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
 }
 
+section {
+  margin: 20px;
+}

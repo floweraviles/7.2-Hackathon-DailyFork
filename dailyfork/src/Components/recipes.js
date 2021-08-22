@@ -22,7 +22,7 @@ const Recipes = () => {
   }, []);
 
   return (
-    <div>
+    <section>
       <h1>Title: {recipes[0]?.title} </h1>
       <img src={recipes[0]?.image} />
       <ol>
@@ -38,7 +38,7 @@ const Recipes = () => {
       <h3>
         {recipes[0]?.summary}
       </h3>
-    </div>
+    </section>
   );
 };
 
