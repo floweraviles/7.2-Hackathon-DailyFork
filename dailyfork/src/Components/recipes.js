@@ -24,7 +24,7 @@ const Recipes = () => {
 
 
   return (
-    <div>
+    <section>
         <Link to="/">
         <button>
             Back 
@@ -45,8 +45,7 @@ const Recipes = () => {
       <h3>
         {recipes[0]?.summary}
       </h3>
-    </div>
-
+    </section>
   );
 };
 
