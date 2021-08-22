@@ -24,43 +24,43 @@ const DailyRecipe = () => {
   return (
     <div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/0">
           <h1>Title: {recipes[0]?.title}</h1>
           <img src={recipes[0]?.image} />
         </Link>
       </div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/1">
           <h1>Title: {recipes[1]?.title}</h1>
           <img src={recipes[1]?.image} />
         </Link>
       </div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/2">
           <h1>Title: {recipes[2]?.title}</h1>
           <img src={recipes[2]?.image} />
         </Link>
       </div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/3">
           <h1>Title: {recipes[3]?.title}</h1>
           <img src={recipes[3]?.image} />
         </Link>
       </div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/4">
           <h1>Title: {recipes[4]?.title}</h1>
           <img src={recipes[4]?.image} />
         </Link>
       </div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/5">
           <h1>Title: {recipes[5]?.title}</h1>
           <img src={recipes[5]?.image} />
         </Link>
       </div>
       <div>
-        <Link to="/recipe">
+        <Link to="/recipe/6">
           <h1>Title: {recipes[6]?.title}</h1>
           <img src={recipes[6]?.image} />
         </Link>
