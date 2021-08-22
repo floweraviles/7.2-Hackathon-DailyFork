@@ -26,7 +26,7 @@ const Recipes = () => {
       <h1>Title: {recipes[5]?.title} </h1>
       <img src={recipes[5]?.image} />
       <ol>
-        {recipes[5]?.analyzedInstructions[5]?.steps.map((item) => {
+        {recipes[5]?.analyzedInstructions[0]?.steps.map((item) => {
           return <li>{item.step}</li>;
         })}
       </ol>
