@@ -1,11 +1,12 @@
 import React from "react";
 import Recipes from "../Components/recipes";
+import "../Styles/Show.css"
 
 function Show() {
   return (
-    <div>
+    <section className="Show">
       <Recipes />
-    </div>
+    </section >
   );
 }
 
