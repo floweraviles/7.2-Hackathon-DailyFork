@@ -8,6 +8,7 @@ const NavBar = () => {
       <nav>
         <NavLink to="/">
           <img src={Logo} alt="daily-fork-logo" />
+          <h1>Daily Fork</h1>
         </NavLink>
       </nav>
     </header>
