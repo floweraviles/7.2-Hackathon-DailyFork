@@ -17,7 +17,12 @@ const Recipes = () => {
       )
       .join(" ");
   };
-  const summary = <h3>{recipe?.summary}</h3>;
+
+  const createMarkup = () =>{
+    return {__html: recipe?.summary};
+  }
+  
+  const summary = <p dangerouslySetInnerHTML={createMarkup()}></p>;
   const ingredients = (
     <ul>
       {recipe?.nutrition?.ingredients.map((item) => {
@@ -62,7 +67,7 @@ const Recipes = () => {
     <section>
       <h1>{recipe?.title} </h1>
       <img src={recipe?.image} alt="gluten-free-recipe" />
-      <div>
+      <div className="buttons">
         <button value="0" onClick={handleClick}>
           Summary
         </button>

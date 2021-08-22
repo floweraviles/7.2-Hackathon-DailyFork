@@ -19,7 +19,8 @@ nav a {
 
 nav a h1 {
     position: absolute;
-    top: 30px;
+    top: 40px;
     color: #fff;
     font-style: italic;
+    font-size: 24px;
 } 

@@ -9,11 +9,10 @@
 }
 
  .Home h1 {
-    font-size: 28px;
+    font-size: 20px;
     color: #444242;
     text-align: center;
-    letter-spacing: 6px;
-    padding-top: 20px;
+    padding-top: 16px;
 }
 
 .swiper-slide{
@@ -33,18 +32,25 @@
 .Home .swiper-container .swiper-slide h2 {
     text-align: center;
     color: #442bb3;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .Home .swiper-container .swiper-slide img {
     width: 100%;
     height: auto;
     max-width: 600px;
-    max-height: 360px;
+    max-height: 320px;
     object-fit: cover;
 }
 .swiper-button-prev,
 .swiper-button-next {
     color: #444242;
+}
+
+.swiper-pagination {
+    margin-top: 100px;
 }
 
 .swiper-pagination-bullet-active {
