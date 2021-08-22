@@ -38,7 +38,7 @@ const DailyRecipe = () => {
           <SwiperSlide key={i}>
             <Link to={`/recipe/${i}`}>
               <h2>{recipe?.title}</h2>
-              <img src={recipe?.image} alt="daily-fork-recipe"/>
+              <img src={recipe?.image} alt="daily-fork-recipe" />
             </Link>
           </SwiperSlide>
         );
