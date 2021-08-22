@@ -14,7 +14,7 @@ require("dotenv").config();
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <NavBar />
       <Switch>
         <Route exact path={"/"}>
@@ -42,7 +42,7 @@ function App() {
           <Recipes6 />
         </Route>
       </Switch>
-    </div>
+    </main>
   );
 }
 

@@ -43,7 +43,7 @@ const Recipes = () => {
       <h3>
         {recipes[4]?.summary}
       </h3>
-    </div>
+    </section>
   );
 };
 

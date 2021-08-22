@@ -45,8 +45,12 @@ const Recipes = () => {
       <h3>
         {recipes[0]?.summary}
       </h3>
+<<<<<<< HEAD
     </div>
 
+=======
+    </section>
+>>>>>>> e7c603524e92cb85f0a38ea1c0cf60aa15ef2e02
   );
 };
 

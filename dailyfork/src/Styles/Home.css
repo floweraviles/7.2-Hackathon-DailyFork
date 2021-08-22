@@ -1,0 +1,52 @@
+.Home {
+    background-color: rgba(225, 225, 225, 0.4);
+    border-radius: 20px;
+    width: 80%;
+    height: 80vh;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+ .Home h1 {
+    font-size: 28px;
+    color: #444242;
+    text-align: center;
+    letter-spacing: 6px;
+    padding-top: 20px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.Home .swiper-container .swiper-slide a {
+    text-decoration: none;
+    width: 60%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Home .swiper-container .swiper-slide h2 {
+    text-align: center;
+    color: #785DF5;
+}
+
+.Home .swiper-container .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 360px;
+    object-fit: cover;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #444242;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #785DF5;
+}
