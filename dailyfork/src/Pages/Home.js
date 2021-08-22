@@ -5,7 +5,7 @@ import "../Styles/Home.css"
 function Home() {
   return (
     <section className="Home">
-      <h1>Gluten Free Meal of the Day</h1>
+      <h1>Gluten-Free Meal of the Day</h1>
       <DailyRecipe />
     </section>
   );
