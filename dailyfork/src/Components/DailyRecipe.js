@@ -27,49 +27,22 @@ const DailyRecipe = () => {
   }, []);
 
   return (
-    <Swiper spaceBetween={50} slidesPerView={1} navigation pagination={{clickable: true}}>
-      <SwiperSlide>
-        <Link to="/recipe/0">
-          <h2>{recipes[0]?.title}</h2>
-          <img src={recipes[0]?.image} />
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Link to="/recipe/1">
-          <h2>{recipes[1]?.title}</h2>
-          <img src={recipes[1]?.image} />
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Link to="/recipe/2">
-          <h2>{recipes[2]?.title}</h2>
-          <img src={recipes[2]?.image} />
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Link to="/recipe/3">
-          <h2>{recipes[3]?.title}</h2>
-          <img src={recipes[3]?.image} />
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Link to="/recipe/4">
-          <h2>{recipes[4]?.title}</h2>
-          <img src={recipes[4]?.image} />
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Link to="/recipe/5">
-          <h2>{recipes[5]?.title}</h2>
-          <img src={recipes[5]?.image} />
-        </Link>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Link to="/recipe/6">
-          <h2>{recipes[6]?.title}</h2>
-          <img src={recipes[6]?.image} />
-        </Link>
-      </SwiperSlide>
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+    >
+      {recipes.map((recipe, i) => {
+        return (
+          <SwiperSlide key={i}>
+            <Link to={`/recipe/${i}`}>
+              <h2>{recipe?.title}</h2>
+              <img src={recipe?.image} alt="daily-fork-recipe"/>
+            </Link>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
