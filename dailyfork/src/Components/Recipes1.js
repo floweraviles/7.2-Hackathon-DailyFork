@@ -22,7 +22,12 @@ const Recipes = () => {
   }, []);
 
   return (
-    <section>
+    <div>
+        <Link to="/">
+        <button>
+            Back 
+        </button>
+        </Link>
       <h1>Title: {recipes[1]?.title} </h1>
       <img src={recipes[1]?.image} />
       <ol>

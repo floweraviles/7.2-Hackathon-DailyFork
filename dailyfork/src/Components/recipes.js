@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
 
+
   useEffect(() => {
     async function getRecipes() {
       const diet = "Gluten Free";
@@ -21,8 +22,14 @@ const Recipes = () => {
     getRecipes();
   }, []);
 
+
   return (
-    <section>
+    <div>
+        <Link to="/">
+        <button>
+            Back 
+        </button>
+        </Link>
       <h1>Title: {recipes[0]?.title} </h1>
       <img src={recipes[0]?.image} />
       <ol>
@@ -38,7 +45,12 @@ const Recipes = () => {
       <h3>
         {recipes[0]?.summary}
       </h3>
+<<<<<<< HEAD
+    </div>
+
+=======
     </section>
+>>>>>>> e7c603524e92cb85f0a38ea1c0cf60aa15ef2e02
   );
 };
 
